@@ -75,3 +75,12 @@ docker-compose up --build
 The application will be available at http://localhost:8000
 
 The root of the project is http://localhost:8000/seasonal-flavors/
+![Screenshot 2024-11-16 183839](https://github.com/user-attachments/assets/1a5dff60-27c1-4169-a505-324b35ffd259)
+![Screenshot 2024-11-16 183621](https://github.com/user-attachments/assets/d45900f3-bf4a-4b25-bd2c-a2cfcb6b1249)
+![Screenshot 2024-11-16 183658](https://github.com/user-attachments/assets/0d9913e3-c48d-4109-8348-0acb12102292)
+![Screenshot 2024-11-16 183738](https://github.com/user-attachments/assets/3f18cbef-cbcb-420c-b89b-85a29d922375)
+![Screenshot 2024-11-16 183907](https://github.com/user-attachments/assets/3a87dcd7-50a9-47ad-b1ee-a8595d1707a7)
+
+
+
+

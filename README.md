@@ -43,21 +43,14 @@ Run the following command to set up the database tables:
 
 python manage.py migrate
 
-5. Create a Superuser (Optional)
-
-To access the Django admin, you can create a superuser:
-
-python manage.py createsuperuser
-
-Follow the prompts to set the username, email, and password.
-6. Start the Development Server
+5. Start the Development Server
 
 To run the project locally, start the Django development server:
 
 python manage.py runserver
 
 By default, the application will run on http://localhost:8000/.
-7. Access the Application
+6. Access the Application
 
     Navigate to http://localhost:8000/seasonal-flavors/ to view the list of seasonal flavors.
     You can add new seasonal flavors or view existing ones.

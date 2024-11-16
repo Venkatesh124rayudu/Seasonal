@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Suggestion Submitted</title>
+</head>
+<body>
+    <h1>Your Suggestion Has Been Successfully Placed!</h1>
+    <h2>Details:</h2>
+    <p><strong>Name:</strong> {{ suggestion.customer_name }}</p>
+    <p><strong>Suggestion:</strong> {{ suggestion.flavor_suggestion }}</p>
+    <p><strong>Allergy Concerns:</strong> {{ suggestion.allergy_concerns }}</p>
+    <a href="{% url 'ingredient_inventory' %}">Back to Ingredient Inventory</a>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Seasonal Flavor</title>
+</head>
+<body>
+    <h1>Add Seasonal Flavor</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <a href="{% url 'seasonal_flavors' %}"><button type="submit">Submit</button></a>
+    </form>
+    <a href="{% url 'seasonal_flavors' %}">Back to Seasonal Flavors</a>
+</body>
+</html>

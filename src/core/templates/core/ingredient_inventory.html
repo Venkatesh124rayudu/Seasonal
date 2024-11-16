@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ingredient Inventory</title>
+</head>
+<body>
+    <h1>Ingredient Inventory</h1>
+    {% if selected_flavor %}
+    <h2>Ingredients for: {{ selected_flavor.name }}</h2>
+    <p>{{ selected_flavor.description }}</p>
+    {% endif %}
+    <ul>
+        {% for ingredient in ingredients %}
+        <li>
+            <form method="POST" action="{% url 'update_ingredient_quantity' %}">
+                {% csrf_token %}
+                <strong>{{ ingredient.name }}</strong><br>
+                Quantity %: 
+                <input type="number" name="quantity" value="{{ ingredient.quantity }}" required 
+                       min="0" max="100" step="1">
+                <input type="hidden" name="ingredient_id" value="{{ ingredient.id }}">
+                <button type="submit">Update Quantity</button>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_customer_suggestion' %}">
+        <button>Add Customer Suggestion</button>
+    </a>
+    
+    <a href="{% url 'seasonal_flavors' %}">Back to Seasonal Flavors</a>
+</body>
+</html>

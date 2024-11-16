@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seasonal Flavors</title>
+</head>
+<body>
+    <h1>Seasonal Flavors</h1>
+    <a href="{% url 'add_seasonal_flavor' %}">
+        <button>Add New Flavor</button>
+    </a>
+    <ul>
+        {% for flavor in flavors %}
+        <li>
+            <strong>{{ flavor.name }}</strong><br>
+            Description: {{ flavor.description }}<br>
+            Season: {{ flavor.season }}<br>
+            Active: {% if flavor.is_active %}Yes{% else %}No{% endif %}
+            <form action="{% url 'ingredient_inventory' %}" method="get" style="display: inline;">
+                <input type="hidden" name="flavor_id" value="{{ flavor.id }}">
+                <button type="submit">View Ingredients</button>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
